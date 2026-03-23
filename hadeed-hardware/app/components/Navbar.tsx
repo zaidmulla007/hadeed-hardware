@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, Mail, ChevronDown, ChevronRight } from "lucide-react";
+import { FaYoutube, FaFacebookF, FaLinkedinIn, FaXTwitter, FaTiktok } from "react-icons/fa6";
 import { brands } from "@/app/data/products";
 
 const navLinks = [
@@ -12,6 +13,7 @@ const navLinks = [
   { name: "Products", href: "/products", hasDropdown: true, match: "/products" },
   { name: "Brands", href: "/brands", match: "/brands" },
   { name: "Why Us", href: "/why-us", match: "/why-us" },
+  { name: "Blog", href: "/blog", match: "/blog" },
   { name: "Contact", href: "/contact", match: "/contact" },
 ];
 
@@ -49,9 +51,23 @@ export default function Navbar() {
               info@hadeeddubai.ae
             </a>
           </div>
-          <span className="text-white/70">
-            Nakheel Road, Deira, Dubai - UAE
-          </span>
+          <div className="flex items-center gap-3">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-blue-accent transition-colors">
+              <FaFacebookF size={16} />
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-blue-accent transition-colors">
+              <FaYoutube size={16} />
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-blue-accent transition-colors">
+              <FaLinkedinIn size={16} />
+            </a>
+            <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-blue-accent transition-colors">
+              <FaXTwitter size={16} />
+            </a>
+            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-blue-accent transition-colors">
+              <FaTiktok size={14} />
+            </a>
+          </div>
         </div>
       </div>
 
@@ -76,11 +92,14 @@ export default function Navbar() {
                 className="h-10 md:h-12 w-auto object-contain"
               />
               <div>
-                <span className="text-blue font-bold text-base md:text-lg leading-tight block">
-                  Hadeed Hardware
+                <span className="text-grey text-[8px] md:text-[9px] leading-tight block">
+                  حديد للأدوات والمعدات التجارية ذ.م.م
                 </span>
-                <span className="text-grey text-[9px] md:text-[10px] tracking-wider leading-tight block">
-                  & Tools Trading LLC
+                <span className="text-blue font-extrabold text-2xl md:text-3xl leading-tight block">
+                  HADEED
+                </span>
+                <span className="text-grey text-[7px] md:text-[8px] leading-tight block">
+                  HARDWARE & TOOLS TRDG LLC
                 </span>
               </div>
             </Link>

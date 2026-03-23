@@ -5,7 +5,8 @@ import { ChevronRight } from "lucide-react";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import FloatingActions from "@/app/components/FloatingActions";
-import { getProductImage } from "@/app/data/productImages";
+import { getProductImage, getBrandLogo } from "@/app/data/productImages";
+import Image from "next/image";
 
 interface SubcategoryInfo {
   name: string;
@@ -120,8 +121,14 @@ export default function CategorySectorClient({
             >
               {/* Brand Header */}
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-11 h-11 bg-blue rounded-xl flex items-center justify-center text-white font-bold text-sm shrink-0">
-                  {brand.abbr}
+                <div className="w-11 h-11 bg-white rounded-xl flex items-center justify-center overflow-hidden p-1.5 shrink-0">
+                  <Image
+                    src={getBrandLogo(brand.slug)}
+                    alt={brand.name}
+                    width={36}
+                    height={36}
+                    className="object-contain w-full h-full"
+                  />
                 </div>
                 <div>
                   <Link
@@ -155,7 +162,7 @@ export default function CategorySectorClient({
                   </div>
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
                     {cat.subcategories.map((sub) => {
-                      const image = getProductImage(sub.slug, brand.sector);
+                      const image = getProductImage(brand.slug, cat.slug, sub.slug);
                       return (
                         <Link
                           key={sub.slug}
@@ -165,14 +172,12 @@ export default function CategorySectorClient({
                             whileHover={{ y: -4 }}
                             className="bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-blue-accent/40 hover:shadow-lg hover:shadow-blue/5 transition-all group"
                           >
-                            <div className="relative h-24 sm:h-28 overflow-hidden">
-                              <div
-                                className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500"
-                                style={{
-                                  backgroundImage: `url('${image}')`,
-                                }}
+                            <div className="relative h-24 sm:h-28 overflow-hidden bg-grey-light flex items-center justify-center p-3">
+                              <img
+                                src={image}
+                                alt={sub.name}
+                                className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
                               />
-                              <div className="absolute inset-0 bg-blue-dark/20 group-hover:bg-blue-dark/10 transition-colors" />
                             </div>
                             <div className="p-3">
                               <h4 className="text-xs font-semibold text-blue-dark group-hover:text-blue transition-colors line-clamp-2">
@@ -200,7 +205,7 @@ export default function CategorySectorClient({
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-20 bg-gradient-to-br from-blue-dark via-blue to-blue-dark">
+      <section className="py-16 md:py-20 mb-10 bg-gradient-to-br from-blue-dark via-blue to-blue-dark">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -7,6 +7,8 @@ import Footer from "@/app/components/Footer";
 import FloatingActions from "@/app/components/FloatingActions";
 import ProductSidebar from "@/app/components/ProductSidebar";
 import { brands, getTotalSubcategories } from "@/app/data/products";
+import { getBrandLogo } from "@/app/data/productImages";
+import Image from "next/image";
 
 const sectorColors: Record<string, string> = {
   tools: "bg-blue/10 text-blue",
@@ -71,8 +73,14 @@ export default function ProductsPage() {
                         className="group block bg-white rounded-2xl border border-gray-200 p-5 hover:shadow-lg hover:shadow-blue/5 hover:border-blue-accent/30 transition-all duration-300"
                       >
                         <div className="flex items-center gap-3 mb-3">
-                          <div className="w-11 h-11 bg-blue rounded-xl flex items-center justify-center text-white font-bold text-sm shrink-0">
-                            {brand.abbr}
+                          <div className="w-11 h-11 bg-white rounded-xl flex items-center justify-center overflow-hidden p-1.5 shrink-0 border border-gray-100">
+                            <Image
+                              src={getBrandLogo(brand.slug)}
+                              alt={brand.name}
+                              width={36}
+                              height={36}
+                              className="object-contain w-full h-full"
+                            />
                           </div>
                           <div>
                             <h3 className="font-bold text-blue-dark group-hover:text-blue transition-colors text-sm">

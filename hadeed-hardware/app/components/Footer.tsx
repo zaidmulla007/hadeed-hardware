@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { FaYoutube, FaFacebookF, FaLinkedinIn, FaXTwitter, FaTiktok } from "react-icons/fa6";
 
 const quickLinks = [
   { name: "Home", href: "/" },
@@ -52,17 +53,21 @@ export default function Footer() {
                 className="h-10 w-auto object-contain rounded-lg"
               />
               <div>
-                <span className="font-bold text-lg block leading-tight">
-                  Hadeed Hardware
+                <span className="text-white/50 text-[8px] md:text-[9px] leading-tight block">
+                  حديد للأدوات والمعدات التجارية ذ.م.م
                 </span>
-                <span className="text-white/50 text-xs tracking-wider">
-                  & Tools Trading LLC
+                <span className="font-extrabold text-3xl block leading-tight">
+                  HADEED
+                </span>
+                <span className="text-white/50 text-[7px] md:text-[8px] leading-tight block">
+                  HARDWARE & TOOLS TRDG LLC
                 </span>
               </div>
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
-              Your trusted partner for hardware, industrial tools, safety
-              equipment, and building materials in Dubai, UAE.
+              Established in 2012, we specialize in supplying hardware, building
+              materials, machine tools, safety items, and welding equipment for
+              construction, oilfield services, and manufacturing industries.
             </p>
             <div className="space-y-3 text-sm">
               <a
@@ -85,6 +90,23 @@ export default function Footer() {
                   Deira, Dubai - U.A.E.
                 </span>
               </div>
+            </div>
+            <div className="flex items-center gap-3 mt-6">
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-white/70 hover:bg-blue-accent hover:text-white transition-all">
+                <FaFacebookF size={14} />
+              </a>
+              <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-white/70 hover:bg-blue-accent hover:text-white transition-all">
+                <FaYoutube size={14} />
+              </a>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-white/70 hover:bg-blue-accent hover:text-white transition-all">
+                <FaLinkedinIn size={14} />
+              </a>
+              <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-white/70 hover:bg-blue-accent hover:text-white transition-all">
+                <FaXTwitter size={14} />
+              </a>
+              <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-white/70 hover:bg-blue-accent hover:text-white transition-all">
+                <FaTiktok size={14} />
+              </a>
             </div>
           </div>
 
@@ -137,9 +159,9 @@ export default function Footer() {
             </div>
             <div className="mt-6">
               <h5 className="font-semibold text-sm mb-2 text-white/80">
-                Managing Director
+                Managing Director &amp; CEO
               </h5>
-              <p className="text-white/50 text-sm">Ali Asgher Abid</p>
+              <p className="text-white/50 text-sm">Aliasgher Abid</p>
             </div>
           </div>
         </div>
@@ -155,7 +177,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="text-blue-accent hover:text-white transition-colors"
             >
-              Zeta Coding
+              ZetaCoding
             </a>
           </p>
           <div className="flex gap-6 text-white/40 text-sm">

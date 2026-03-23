@@ -82,7 +82,7 @@ export default function CategoryClient({
               {/* Product Cards */}
               <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-5">
                 {category.subcategories.map((sub, i) => {
-                  const img = getProductImage(sub.slug, brand.sector);
+                  const img = getProductImage(brand.slug, category.slug, sub.slug);
                   return (
                     <motion.div
                       key={sub.slug}
@@ -94,12 +94,12 @@ export default function CategoryClient({
                         href={`/products/${brand.slug}/${category.slug}/${sub.slug}`}
                         className="group block bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-lg hover:shadow-blue/5 hover:border-blue-accent/30 transition-all duration-300"
                       >
-                        <div className="relative h-36 sm:h-44 overflow-hidden">
-                          <div
-                            className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500"
-                            style={{ backgroundImage: `url('${img}')` }}
+                        <div className="relative h-36 sm:h-44 overflow-hidden bg-grey-light flex items-center justify-center p-4">
+                          <img
+                            src={img}
+                            alt={sub.name}
+                            className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                           <div className="absolute top-3 left-3">
                             <span className="text-[10px] px-2.5 py-1 bg-white/90 backdrop-blur-sm text-blue font-semibold rounded-full">
                               {brand.name}

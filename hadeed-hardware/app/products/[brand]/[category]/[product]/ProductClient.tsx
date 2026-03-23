@@ -33,7 +33,7 @@ export default function ProductClient({
   const product = category.subcategories.find((s) => s.slug === productSlug);
   if (!product) return notFound();
 
-  const images = getProductImages(product.slug, brand.sector);
+  const images = getProductImages(brand.slug, category.slug, product.slug);
   const [activeImage, setActiveImage] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -117,13 +117,12 @@ export default function ProductClient({
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.3 }}
-                      className="relative h-48 sm:h-64 md:h-80 rounded-xl overflow-hidden mb-4 bg-grey-light"
+                      className="relative h-48 sm:h-64 md:h-80 rounded-xl overflow-hidden mb-4 bg-grey-light flex items-center justify-center p-4"
                     >
-                      <div
-                        className="absolute inset-0 bg-cover bg-center"
-                        style={{
-                          backgroundImage: `url('${images[activeImage]}')`,
-                        }}
+                      <img
+                        src={images[activeImage]}
+                        alt={product.name}
+                        className="max-w-full max-h-full object-contain"
                       />
                       <div className="absolute top-3 left-3">
                         <span className="text-[10px] px-2.5 py-1 bg-white/90 backdrop-blur-sm text-blue font-semibold rounded-full">
@@ -138,15 +137,16 @@ export default function ProductClient({
                         <button
                           key={i}
                           onClick={() => setActiveImage(i)}
-                          className={`w-14 h-14 sm:w-16 sm:h-16 rounded-lg overflow-hidden border-2 transition-all ${
+                          className={`w-14 h-14 sm:w-16 sm:h-16 rounded-lg overflow-hidden border-2 transition-all bg-grey-light flex items-center justify-center p-1 ${
                             activeImage === i
                               ? "border-blue-accent"
                               : "border-gray-200 hover:border-gray-300"
                           }`}
                         >
-                          <div
-                            className="w-full h-full bg-cover bg-center"
-                            style={{ backgroundImage: `url('${img}')` }}
+                          <img
+                            src={img}
+                            alt={product.name}
+                            className="max-w-full max-h-full object-contain"
                           />
                         </button>
                       ))}
@@ -323,7 +323,7 @@ export default function ProductClient({
                   </h3>
                   <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-5">
                     {related.slice(0, 6).map((sub, i) => {
-                      const img = getProductImage(sub.slug, brand.sector);
+                      const img = getProductImage(brand.slug, category.slug, sub.slug);
                       return (
                         <motion.div
                           key={sub.slug}
@@ -336,14 +336,12 @@ export default function ProductClient({
                             href={`/products/${brand.slug}/${category.slug}/${sub.slug}`}
                             className="group block bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-lg hover:shadow-blue/5 hover:border-blue-accent/30 transition-all duration-300"
                           >
-                            <div className="relative h-36 overflow-hidden">
-                              <div
-                                className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500"
-                                style={{
-                                  backgroundImage: `url('${img}')`,
-                                }}
+                            <div className="relative h-36 overflow-hidden bg-grey-light flex items-center justify-center p-3">
+                              <img
+                                src={img}
+                                alt={sub.name}
+                                className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
                               />
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                             </div>
                             <div className="p-4">
                               <h4 className="font-bold text-blue-dark group-hover:text-blue transition-colors text-sm mb-1">

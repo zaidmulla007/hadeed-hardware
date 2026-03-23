@@ -43,8 +43,8 @@ export default function About() {
               />
               <div className="absolute inset-0 bg-blue-dark/20" />
               <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm rounded-xl px-6 py-4">
-                <div className="text-3xl font-bold text-blue">15+</div>
-                <div className="text-sm text-grey">Years of Experience</div>
+                <div className="text-3xl font-bold text-blue">32+</div>
+                <div className="text-sm text-grey">Years of Market Experience</div>
               </div>
             </div>
           </div>
@@ -53,17 +53,18 @@ export default function About() {
               Trusted Supplier of Hardware & Building Materials
             </h3>
             <p className="text-grey leading-relaxed mb-4">
-              Hadeed Hardware & Tools Trading LLC is a trusted supplier of
-              hardware, industrial tools, safety equipment, and building
-              materials based in Dubai, United Arab Emirates. Strategically
-              located on Nakheel Road in Deira, we serve contractors,
-              construction companies, maintenance teams, and industrial clients
-              across the UAE.
+              Established in 2012 in the Emirate of Dubai, Hadeed Hardware &
+              Tools Trading LLC was founded by seasoned professionals with over
+              32 years of market experience. We specialize in supplying
+              hardware, building materials, machine tools, power tools, hand
+              tools, safety items, and welding equipment for the construction,
+              oilfield services, and manufacturing industries.
             </p>
             <p className="text-grey leading-relaxed mb-6">
-              With years of experience, we have built a strong reputation for
-              quality products, competitive pricing, and reliable customer
-              service from 20+ globally recognized brands.
+              Driven by a passion for excellence and a commitment to customer
+              satisfaction, we have forged strong partnerships with clients
+              across the region, ensuring efficient delivery and competitive
+              pricing while prioritizing long-term client relationships.
             </p>
             <Link
               href="/about"

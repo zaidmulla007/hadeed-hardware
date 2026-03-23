@@ -25,7 +25,7 @@ const products = [
       "Cutting Machines",
     ],
     image:
-      "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=600&q=80",
+      "/products/DEWALT/Drills%20%26%20Drivers/Cordless%20Drills/PNG%20(1).jpg",
     color: "from-blue to-blue-dark",
   },
   {
@@ -42,7 +42,7 @@ const products = [
       "Measuring Tools",
     ],
     image:
-      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80",
+      "/products/MAKITA/Drills%20%26%20Drivers/Cordless%20Drills/png%20(1).jpg",
     color: "from-grey-dark to-blue-dark",
   },
   {
@@ -59,7 +59,7 @@ const products = [
       "Protective Goggles",
     ],
     image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80",
+      "/products/DELTAPLUS/Head%20Protection/Safety%20Helmets/PNG%20(1).jpg",
     color: "from-blue-accent to-blue",
   },
   {
@@ -75,7 +75,7 @@ const products = [
       "Cutting Torches",
     ],
     image:
-      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80",
+      "/products/ESAB/Welding%20Machines/MIGMAG%20Welders/PNG%20(1).jpg",
     color: "from-blue-dark to-grey-dark",
   },
   {
@@ -91,7 +91,7 @@ const products = [
       "Infrared Thermometers",
     ],
     image:
-      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&q=80",
+      "/products/FLUKE/Electrical%20Testing/Digital%20Multimeters/PNG%20(1).jpg",
     color: "from-blue to-blue-accent",
   },
   {
@@ -107,7 +107,7 @@ const products = [
       "Degreasers",
     ],
     image:
-      "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=600&q=80",
+      "/products/CRC/Maintenance%20Sprays/Multi-Purpose%20Lubricants/PNG.jpg",
     color: "from-grey-dark to-blue",
   },
 ];
@@ -154,10 +154,13 @@ export default function Products() {
               >
                 {/* Image */}
                 <div className="relative h-40 sm:h-48 overflow-hidden">
-                  <div
-                    className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500"
-                    style={{ backgroundImage: `url('${product.image}')` }}
-                  />
+                  <div className="absolute inset-0 bg-grey-light flex items-center justify-center p-4">
+                    <img
+                      src={product.image}
+                      alt={product.title}
+                      className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
                   <div
                     className={`absolute inset-0 bg-gradient-to-t ${product.color} opacity-70`}
                   />

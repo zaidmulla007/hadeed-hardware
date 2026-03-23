@@ -8,7 +8,8 @@ import Footer from "@/app/components/Footer";
 import FloatingActions from "@/app/components/FloatingActions";
 import ProductSidebar from "@/app/components/ProductSidebar";
 import { getBrandBySlug } from "@/app/data/products";
-import { getProductImage } from "@/app/data/productImages";
+import { getProductImage, getBrandLogo } from "@/app/data/productImages";
+import Image from "next/image";
 
 export default function BrandClient({ brandSlug }: { brandSlug: string }) {
   const brand = getBrandBySlug(brandSlug);
@@ -50,8 +51,14 @@ export default function BrandClient({ brandSlug }: { brandSlug: string }) {
               <span className="text-white">{brand.name}</span>
             </div>
             <div className="flex items-center gap-3 sm:gap-4">
-              <div className="w-11 h-11 sm:w-14 sm:h-14 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center text-white font-bold text-sm sm:text-lg border border-white/20">
-                {brand.abbr}
+              <div className="w-11 h-11 sm:w-14 sm:h-14 bg-white rounded-xl flex items-center justify-center overflow-hidden p-1.5">
+                <Image
+                  src={getBrandLogo(brand.slug)}
+                  alt={brand.name}
+                  width={48}
+                  height={48}
+                  className="object-contain w-full h-full"
+                />
               </div>
               <div>
                 <h1 className="text-3xl md:text-4xl font-bold text-white">
@@ -109,7 +116,7 @@ export default function BrandClient({ brandSlug }: { brandSlug: string }) {
 
                   <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-5">
                     {cat.subcategories.map((sub, i) => {
-                      const img = getProductImage(sub.slug, brand.sector);
+                      const img = getProductImage(brand.slug, cat.slug, sub.slug);
                       return (
                         <motion.div
                           key={sub.slug}
@@ -123,12 +130,12 @@ export default function BrandClient({ brandSlug }: { brandSlug: string }) {
                             className="group block bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-lg hover:shadow-blue/5 hover:border-blue-accent/30 transition-all duration-300"
                           >
                             {/* Image */}
-                            <div className="relative h-36 sm:h-44 overflow-hidden">
-                              <div
-                                className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500"
-                                style={{ backgroundImage: `url('${img}')` }}
+                            <div className="relative h-36 sm:h-44 overflow-hidden bg-grey-light flex items-center justify-center p-4">
+                              <img
+                                src={img}
+                                alt={sub.name}
+                                className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
                               />
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                               <div className="absolute top-3 left-3">
                                 <span className="text-[10px] px-2.5 py-1 bg-white/90 backdrop-blur-sm text-blue font-semibold rounded-full">
                                   {brand.name}

@@ -158,7 +158,7 @@ export default function ContactPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm h-full">
+              <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm h-full flex flex-col">
                 <h3 className="text-xl font-bold text-blue-dark mb-2">
                   Send Us a Message
                 </h3>
@@ -166,7 +166,7 @@ export default function ContactPage() {
                   Fill out the form below and our team will get back to you
                   within 24 hours.
                 </p>
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-4 flex-1 flex flex-col">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <input
                       type="text"
@@ -222,7 +222,7 @@ export default function ContactPage() {
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
                     }
-                    className="w-full px-4 py-3 bg-grey-light border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-blue-accent transition-colors resize-none"
+                    className="w-full px-4 py-3 bg-grey-light border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-blue-accent transition-colors resize-none flex-1 min-h-[120px]"
                   />
                   <motion.button
                     type="submit"

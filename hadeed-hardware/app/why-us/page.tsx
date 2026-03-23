@@ -23,33 +23,33 @@ import FloatingActions from "@/app/components/FloatingActions";
 const reasons = [
   {
     icon: PackageCheck,
-    title: "Wide Range of Products",
-    desc: "From power tools to safety gear, welding equipment to industrial chemicals — everything under one roof.",
-    detail: "We maintain an extensive inventory covering 6 major sectors: power tools, safety equipment, welding supplies, industrial chemicals, testing instruments, and abrasives. This means fewer suppliers and simplified procurement for your projects.",
+    title: "Desire",
+    desc: "Desire drives us to surpass expectations, innovate relentlessly, and deliver excellence in every aspect of our business.",
+    detail: "Our desire ensures that our clients' needs are not just met but exceeded. We constantly push ourselves to find better solutions, faster delivery methods, and more competitive pricing for every project we support.",
   },
   {
     icon: Globe,
-    title: "Trusted International Brands",
-    desc: "We partner with 20+ globally recognized brands including Makita, DeWalt, 3M, Fluke, ESAB & more.",
-    detail: "Our brand portfolio spans TOTAL Tools, Makita, DeWalt, Stanley, 3M, Norton, DeltaPlus, Fluke, UNI-T, ESAB, Victor, Honeywell, and many more — ensuring you get genuine, certified products every time.",
+    title: "Responsibility",
+    desc: "Responsibility anchors us, guiding every decision and action for ethical and sustainable delivery.",
+    detail: "We ensure the ethical and sustainable delivery of our products and services, while actively contributing to the well-being of our communities and the environment. Every decision is guided by our commitment to doing what's right.",
   },
   {
     icon: BadgeDollarSign,
-    title: "Competitive Prices",
-    desc: "Get the best value with our competitive pricing without compromising on product quality.",
-    detail: "As authorized distributors for multiple brands, we offer direct-from-manufacturer pricing. Our bulk supply capabilities and long-standing supplier relationships allow us to pass on significant savings to our customers.",
+    title: "Relations",
+    desc: "Relationships are the cornerstone of our success, built on transparency, integrity, and mutual respect.",
+    detail: "We prioritize understanding, trust, and collaboration with our clients, suppliers, and stakeholders, fostering enduring partnerships built on transparency, integrity, and mutual respect that stand the test of time.",
   },
   {
     icon: Zap,
-    title: "Fast Availability",
-    desc: "Extensive inventory management ensures fast availability and reliable supply for urgent requirements.",
-    detail: "Our warehouse in Deira, Dubai is stocked with thousands of products ready for immediate dispatch. We understand the urgency of construction and industrial projects, so we prioritize rapid fulfillment.",
+    title: "Creative",
+    desc: "Creativity fuels our journey, inspiring innovative solutions and pushing boundaries in everything we do.",
+    detail: "It's the spark that ignites new ideas, drives continuous improvement, and keeps us at the forefront of our industry, delivering fresh perspectives and unexpected delights to our clients and partners alike.",
   },
   {
     icon: BrainCircuit,
     title: "Industry Expertise",
-    desc: "Years of experience in hardware and building materials industry to guide you to the right solutions.",
-    detail: "With 15+ years serving contractors, engineers, and maintenance teams across the UAE, our team has deep product knowledge to recommend the right tools and materials for your specific applications.",
+    desc: "Over 32 years of market experience in hardware and building materials to guide you to the right solutions.",
+    detail: "Since 2012, our team of seasoned professionals has been serving contractors, engineers, and maintenance teams across the UAE with deep product knowledge for construction, oilfield services, and manufacturing industries.",
   },
   {
     icon: CheckCircle2,
@@ -60,7 +60,7 @@ const reasons = [
 ];
 
 const achievements = [
-  { num: "15+", label: "Years of Experience" },
+  { num: "32+", label: "Years of Market Experience" },
   { num: "20+", label: "Global Brands" },
   { num: "1000+", label: "Products Available" },
   { num: "500+", label: "Satisfied Clients" },
@@ -123,8 +123,9 @@ export default function WhyUsPage() {
               Why Choose Hadeed Hardware
             </h1>
             <p className="mt-4 text-white/70 max-w-2xl mx-auto">
-              Discover what makes us the preferred hardware and industrial
-              supply partner for businesses across the UAE.
+              With over 32 years of market experience since 2012, discover what
+              makes us the preferred hardware and industrial supply partner for
+              construction, oilfield services, and manufacturing industries.
             </p>
           </motion.div>
         </div>
@@ -271,14 +272,14 @@ export default function WhyUsPage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {[
-              "Construction Companies",
+              "Construction Industries",
+              "Oilfield Services",
+              "Manufacturing Industries",
               "Engineering Firms",
               "Fabrication Workshops",
               "Maintenance Teams",
-              "Oil & Gas Industry",
-              "Government Projects",
               "Facility Management",
-              "Retail Hardware Stores",
+              "Government Projects",
             ].map((industry, i) => (
               <motion.div
                 key={i}

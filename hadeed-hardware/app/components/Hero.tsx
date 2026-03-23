@@ -1,32 +1,50 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const slides = [
   {
-    image:
-      "https://images.unsplash.com/photo-1581783898377-1c85bf937427?w=1920&q=80",
+    image: "/banners/PNG%20(1).jpg",
     title: "Your Trusted Partner",
     subtitle: "For Hardware & Industrial Solutions",
     description:
-      "Quality tools, safety equipment, and building materials from globally recognized brands.",
+      "Supplying hardware, building materials, machine tools, safety items, and welding equipment with competitive pricing since 2012.",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=1920&q=80",
+    image: "/banners/PNG%20(2).jpg",
     title: "Professional Tools",
     subtitle: "From World-Leading Brands",
     description:
       "Makita, DeWalt, Stanley, ESAB, Fluke, 3M — 20+ premium brands under one roof.",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80",
+    image: "/banners/PNG%20(3).jpg",
     title: "Safety First",
     subtitle: "Complete PPE & Safety Solutions",
     description:
       "Helmets, gloves, goggles, harnesses — everything to keep your workforce safe.",
+  },
+  {
+    image: "/banners/PNG%20(4).jpg",
+    title: "Welding & Cutting",
+    subtitle: "Industrial-Grade Equipment",
+    description:
+      "ESAB, Victor, Haswel — complete welding machines, consumables, and gas cutting solutions.",
+  },
+  {
+    image: "/banners/PNG%20(5).jpg",
+    title: "Testing & Measuring",
+    subtitle: "Precision Instruments You Can Trust",
+    description:
+      "Fluke, UNI-T, BW Technologies — multimeters, thermal cameras, and gas detectors for professionals.",
+  },
+  {
+    image: "/banners/PNG%20(6).jpg",
+    title: "Industrial Chemicals",
+    subtitle: "Maintenance & Protection Products",
+    description:
+      "CRC, Ambersil, Weicon — lubricants, cleaners, adhesives, and sealants for every application.",
   },
 ];
 
@@ -67,45 +85,50 @@ export default function Hero() {
       </AnimatePresence>
 
       <div className="relative z-10 h-full flex items-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <AnimatePresence mode="wait">
             <motion.div
               key={current}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 100 }}
               transition={{ duration: 0.5 }}
-              className="max-w-2xl"
+              className="max-w-3xl ml-0 sm:ml-8 md:ml-16 lg:ml-24"
             >
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1, duration: 0.5 }}
-                className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-blue-accent/20 border border-blue-accent/40 rounded-full mb-4 sm:mb-6"
+                transition={{ delay: 0.2 }}
+                className="mb-6"
               >
-                <div className="w-2 h-2 bg-blue-accent rounded-full animate-pulse" />
-                <span className="text-blue-accent text-sm font-medium">
+                <span className="inline-block px-4 py-2 bg-blue-accent/20 backdrop-blur-sm border border-blue-accent/40 rounded-full text-blue-accent font-semibold text-sm tracking-wider">
                   Hadeed Hardware & Tools Trading LLC
                 </span>
               </motion.div>
 
               <motion.h1
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-                className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight"
+                transition={{ delay: 0.3 }}
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight"
               >
                 {slides[current].title}
-                <span className="block text-blue-accent">
-                  {slides[current].subtitle}
-                </span>
               </motion.h1>
+
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="text-2xl sm:text-3xl md:text-4xl font-semibold text-blue-accent mb-8"
+              >
+                {slides[current].subtitle}
+              </motion.h2>
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.5 }}
-                className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg text-white/80 max-w-lg"
+                transition={{ delay: 0.5 }}
+                className="text-base sm:text-lg md:text-xl text-white/80 mb-10 max-w-2xl"
               >
                 {slides[current].description}
               </motion.p>
@@ -113,22 +136,18 @@ export default function Hero() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.5 }}
-                className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4"
+                transition={{ delay: 0.6 }}
+                className="flex flex-col sm:flex-row gap-5"
               >
                 <a
                   href="#products"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-4 bg-blue-accent text-white font-semibold rounded-xl hover:bg-blue transition-colors group text-sm sm:text-base"
+                  className="px-8 py-4 bg-blue-accent hover:bg-blue text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-accent/30 text-center"
                 >
                   Explore Products
-                  <ArrowRight
-                    size={18}
-                    className="group-hover:translate-x-1 transition-transform"
-                  />
                 </a>
                 <a
                   href="#contact"
-                  className="inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-colors text-sm sm:text-base"
+                  className="px-8 py-4 border-2 border-blue-accent text-blue-accent hover:bg-blue-accent hover:text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 text-center"
                 >
                   Contact Us
                 </a>
@@ -138,33 +157,33 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Navigation */}
-      <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-3 sm:gap-4">
-        <button
-          onClick={prev}
-          className="p-2 rounded-full border border-white/30 text-white hover:bg-white/10 transition-colors"
-        >
-          <ChevronLeft size={20} />
-        </button>
-        <div className="flex gap-2">
-          {slides.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrent(i)}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                i === current
-                  ? "w-8 bg-blue-accent"
-                  : "w-2 bg-white/50 hover:bg-white/70"
-              }`}
-            />
-          ))}
-        </div>
-        <button
-          onClick={next}
-          className="p-2 rounded-full border border-white/30 text-white hover:bg-white/10 transition-colors"
-        >
-          <ChevronRight size={20} />
-        </button>
+      {/* Navigation Arrows - Left & Right */}
+      <button
+        onClick={prev}
+        className="hidden md:flex absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-14 h-14 bg-blue-accent/20 hover:bg-blue-accent backdrop-blur-sm border border-blue-accent rounded-full items-center justify-center text-white hover:text-white transition-all duration-300 group"
+      >
+        <ChevronLeft className="w-7 h-7 group-hover:scale-110 transition-transform" />
+      </button>
+      <button
+        onClick={next}
+        className="hidden md:flex absolute right-4 md:right-8 lg:right-12 top-1/2 -translate-y-1/2 z-20 w-14 h-14 bg-blue-accent/20 hover:bg-blue-accent backdrop-blur-sm border border-blue-accent rounded-full items-center justify-center text-white hover:text-white transition-all duration-300 group"
+      >
+        <ChevronRight className="w-7 h-7 group-hover:scale-110 transition-transform" />
+      </button>
+
+      {/* Slide Indicators - Bottom Center */}
+      <div className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+        {slides.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            className={`h-3 rounded-full transition-all duration-300 ${
+              i === current
+                ? "w-10 bg-blue-accent"
+                : "w-3 bg-white/50 hover:bg-white/80"
+            }`}
+          />
+        ))}
       </div>
 
     </section>

@@ -2,27 +2,33 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-  PackageCheck,
-  Globe,
-  BadgeDollarSign,
+  Flame,
+  ShieldCheck,
+  Users,
+  Lightbulb,
   ArrowRight,
 } from "lucide-react";
 
 const reasons = [
   {
-    icon: PackageCheck,
-    title: "Wide Range of Products",
-    desc: "From power tools to safety gear, welding equipment to industrial chemicals — everything under one roof.",
+    icon: Flame,
+    title: "Desire",
+    desc: "Desire drives us to surpass expectations, innovate relentlessly, and deliver excellence in every aspect of our business, ensuring that our clients' needs are not just met but exceeded.",
   },
   {
-    icon: Globe,
-    title: "Trusted International Brands",
-    desc: "We partner with 20+ globally recognized brands including Makita, DeWalt, 3M, Fluke, ESAB & more.",
+    icon: ShieldCheck,
+    title: "Responsibility",
+    desc: "Responsibility anchors us, guiding every decision and action as we ensure the ethical and sustainable delivery of our products and services, while contributing to the well-being of our communities.",
   },
   {
-    icon: BadgeDollarSign,
-    title: "Competitive Prices",
-    desc: "Get the best value with our competitive pricing without compromising on product quality.",
+    icon: Users,
+    title: "Relations",
+    desc: "Relationships are the cornerstone of our success, as we prioritize understanding, trust, and collaboration with our clients, suppliers, and stakeholders, fostering enduring partnerships.",
+  },
+  {
+    icon: Lightbulb,
+    title: "Creative",
+    desc: "Creativity fuels our journey, inspiring innovative solutions and pushing boundaries in everything we do — the spark that ignites new ideas and drives continuous improvement.",
   },
 ];
 
@@ -49,14 +55,15 @@ export default function WhyChooseUs() {
             Why Choose Hadeed Hardware
           </h2>
           <p className="mt-4 text-white/60 max-w-2xl mx-auto">
-            At Hadeed Hardware & Tools Trading LLC, we focus on delivering
-            quality products and dependable service to support your projects.
+            With over 32 years of market experience, we are driven by core
+            values that set us apart in the hardware and industrial supply
+            industry.
           </p>
           <div className="mt-4 w-20 h-1 bg-blue-accent mx-auto rounded-full" />
         </motion.div>
 
         {/* Grid — 3 cards */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {reasons.map((r, i) => {
             const Icon = r.icon;
             return (

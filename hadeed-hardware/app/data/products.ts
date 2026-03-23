@@ -211,7 +211,7 @@ export const brands: Brand[] = [
     ],
   },
   {
-    name: "Norton (Saint-Gobain)",
+    name: "Norton",
     slug: "norton",
     abbr: "NR",
     sector: "abrasives",
@@ -518,7 +518,7 @@ export const brands: Brand[] = [
     ],
   },
   {
-    name: "Haswel Electrode",
+    name: "Kiswel Electrode",
     slug: "haswel-electrode",
     abbr: "HE",
     sector: "welding",

@@ -3,12 +3,15 @@ import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronRight, ChevronDown, Search } from "lucide-react";
+import Image from "next/image";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import FloatingActions from "@/app/components/FloatingActions";
+import { getBrandLogo } from "@/app/data/productImages";
 
 type BrandData = {
   brand: string;
+  slug: string;
   abbr: string;
   sector: string;
   categories: { cat: string; subs: string[] }[];
@@ -17,6 +20,7 @@ type BrandData = {
 const brands: BrandData[] = [
   {
     brand: "TOTAL Tools",
+    slug: "total-tools",
     abbr: "TT",
     sector: "tools",
     categories: [
@@ -28,6 +32,7 @@ const brands: BrandData[] = [
   },
   {
     brand: "3M",
+    slug: "3m",
     abbr: "3M",
     sector: "abrasives",
     categories: [
@@ -39,6 +44,7 @@ const brands: BrandData[] = [
   },
   {
     brand: "Ambersil",
+    slug: "ambersil",
     abbr: "AM",
     sector: "chemicals",
     categories: [
@@ -49,6 +55,7 @@ const brands: BrandData[] = [
   },
   {
     brand: "Hadeed Safety Wear",
+    slug: "hadeed-safety-wear",
     abbr: "HS",
     sector: "safety",
     categories: [
@@ -61,7 +68,8 @@ const brands: BrandData[] = [
     ],
   },
   {
-    brand: "Norton (Saint-Gobain)",
+    brand: "Norton",
+    slug: "norton",
     abbr: "NR",
     sector: "abrasives",
     categories: [
@@ -72,6 +80,7 @@ const brands: BrandData[] = [
   },
   {
     brand: "Makita",
+    slug: "makita",
     abbr: "MK",
     sector: "tools",
     categories: [
@@ -84,6 +93,7 @@ const brands: BrandData[] = [
   },
   {
     brand: "DeltaPlus",
+    slug: "deltaplus",
     abbr: "DP",
     sector: "safety",
     categories: [
@@ -96,6 +106,7 @@ const brands: BrandData[] = [
   },
   {
     brand: "BW Technologies",
+    slug: "bw-technologies",
     abbr: "BW",
     sector: "testing",
     categories: [
@@ -105,6 +116,7 @@ const brands: BrandData[] = [
   },
   {
     brand: "JSP",
+    slug: "jsp",
     abbr: "JSP",
     sector: "safety",
     categories: [
@@ -116,6 +128,7 @@ const brands: BrandData[] = [
   },
   {
     brand: "Weicon",
+    slug: "weicon",
     abbr: "WC",
     sector: "chemicals",
     categories: [
@@ -127,6 +140,7 @@ const brands: BrandData[] = [
   },
   {
     brand: "UNI-T",
+    slug: "uni-t",
     abbr: "UT",
     sector: "testing",
     categories: [
@@ -138,6 +152,7 @@ const brands: BrandData[] = [
   },
   {
     brand: "Victor",
+    slug: "victor",
     abbr: "VC",
     sector: "welding",
     categories: [
@@ -148,6 +163,7 @@ const brands: BrandData[] = [
   },
   {
     brand: "Fluke",
+    slug: "fluke",
     abbr: "FL",
     sector: "testing",
     categories: [
@@ -159,6 +175,7 @@ const brands: BrandData[] = [
   },
   {
     brand: "Honeywell",
+    slug: "honeywell",
     abbr: "HW",
     sector: "safety",
     categories: [
@@ -168,7 +185,8 @@ const brands: BrandData[] = [
     ],
   },
   {
-    brand: "Haswel Electrode",
+    brand: "Kiswel Electrode",
+    slug: "haswel-electrode",
     abbr: "HE",
     sector: "welding",
     categories: [
@@ -179,6 +197,7 @@ const brands: BrandData[] = [
   },
   {
     brand: "DeWalt",
+    slug: "dewalt",
     abbr: "DW",
     sector: "tools",
     categories: [
@@ -192,6 +211,7 @@ const brands: BrandData[] = [
   },
   {
     brand: "Stanley",
+    slug: "stanley",
     abbr: "ST",
     sector: "tools",
     categories: [
@@ -204,6 +224,7 @@ const brands: BrandData[] = [
   },
   {
     brand: "Rothenberger",
+    slug: "rothenberger",
     abbr: "RB",
     sector: "tools",
     categories: [
@@ -216,6 +237,7 @@ const brands: BrandData[] = [
   },
   {
     brand: "CRC",
+    slug: "crc",
     abbr: "CRC",
     sector: "chemicals",
     categories: [
@@ -227,6 +249,7 @@ const brands: BrandData[] = [
   },
   {
     brand: "ESAB",
+    slug: "esab",
     abbr: "ES",
     sector: "welding",
     categories: [
@@ -273,8 +296,14 @@ function BrandCard({ brand, defaultOpen }: { brand: BrandData; defaultOpen: bool
         className="w-full flex items-center justify-between p-5 text-left"
       >
         <div className="flex items-center gap-3">
-          <div className="w-11 h-11 bg-blue rounded-xl flex items-center justify-center text-white font-bold text-sm shrink-0">
-            {brand.abbr}
+          <div className="w-11 h-11 bg-white rounded-xl flex items-center justify-center overflow-hidden p-1.5 shrink-0 border border-gray-100">
+            <Image
+              src={getBrandLogo(brand.slug)}
+              alt={brand.brand}
+              width={36}
+              height={36}
+              className="object-contain w-full h-full"
+            />
           </div>
           <div>
             <div className="flex items-center gap-2 flex-wrap">

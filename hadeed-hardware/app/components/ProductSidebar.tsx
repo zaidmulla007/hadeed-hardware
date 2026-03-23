@@ -4,6 +4,8 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ChevronRight, Search } from "lucide-react";
 import { brands } from "@/app/data/products";
+import { getBrandLogo } from "@/app/data/productImages";
+import Image from "next/image";
 
 interface Props {
   activeBrand?: string;
@@ -76,13 +78,19 @@ export default function ProductSidebar({ activeBrand, activeCategory }: Props) {
                     className="flex items-center gap-2 flex-1 min-w-0"
                   >
                     <span
-                      className={`w-7 h-7 rounded-md flex items-center justify-center text-[10px] font-bold shrink-0 ${
+                      className={`w-7 h-7 rounded-md flex items-center justify-center overflow-hidden shrink-0 p-0.5 ${
                         isActive
-                          ? "bg-blue text-white"
-                          : "bg-grey-light text-blue"
+                          ? "bg-blue/10 border border-blue"
+                          : "bg-grey-light"
                       }`}
                     >
-                      {brand.abbr}
+                      <Image
+                        src={getBrandLogo(brand.slug)}
+                        alt={brand.name}
+                        width={24}
+                        height={24}
+                        className="object-contain w-full h-full"
+                      />
                     </span>
                     <span
                       className={`text-xs font-semibold truncate ${
