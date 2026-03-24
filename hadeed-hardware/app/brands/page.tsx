@@ -9,6 +9,10 @@ import Footer from "@/app/components/Footer";
 import FloatingActions from "@/app/components/FloatingActions";
 import { getBrandLogo } from "@/app/data/productImages";
 
+function slugify(str: string) {
+  return str.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+}
+
 type BrandData = {
   brand: string;
   slug: string;
@@ -354,12 +358,13 @@ function BrandCard({ brand, defaultOpen }: { brand: BrandData; defaultOpen: bool
                   </div>
                   <div className="flex flex-wrap gap-1.5">
                     {cat.subs.map((sub, k) => (
-                      <span
+                      <Link
                         key={k}
-                        className="text-xs px-3 py-1.5 bg-grey-light text-grey-dark rounded-full border border-gray-200 hover:bg-blue/5 hover:border-blue-accent/30 hover:text-blue transition-all cursor-default"
+                        href={`/products/${brand.slug}/${slugify(cat.cat)}/${slugify(sub)}`}
+                        className="text-xs px-3 py-1.5 bg-grey-light text-grey-dark rounded-full border border-gray-200 hover:bg-blue/5 hover:border-blue-accent/30 hover:text-blue transition-all"
                       >
                         {sub}
-                      </span>
+                      </Link>
                     ))}
                   </div>
                 </div>
