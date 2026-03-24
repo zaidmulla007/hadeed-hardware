@@ -114,7 +114,7 @@ const products = [
 
 export default function Products() {
   return (
-    <section id="products" className="py-20 md:py-28 bg-grey-light">
+    <section id="products" className="py-10 md:py-14 bg-grey-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <motion.div
@@ -122,7 +122,7 @@ export default function Products() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-14"
+          className="text-center mb-8"
         >
           <span className="text-blue-accent text-sm font-semibold tracking-widest uppercase">
             What We Offer

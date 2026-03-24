@@ -32,8 +32,8 @@ export default function FloatingActions() {
 
       {/* Mobile Consultation Banner */}
       <motion.button
-        initial={{ x: 100, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 1 }}
         onClick={() => setShowConsultation(true)}
         className="md:hidden fixed top-1/2 right-0 -translate-y-1/2 z-40 bg-gradient-to-b from-blue to-blue-dark text-white py-4 px-2 rounded-l-lg shadow-lg"

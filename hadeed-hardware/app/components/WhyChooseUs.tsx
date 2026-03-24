@@ -34,7 +34,7 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section id="why-us" className="py-20 md:py-28 bg-gradient-to-br from-blue-dark via-blue to-blue-dark relative overflow-hidden">
+    <section id="why-us" className="py-10 md:py-14 bg-gradient-to-br from-blue-dark via-blue to-blue-dark relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-blue-accent/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-accent/5 rounded-full blur-3xl" />
@@ -46,7 +46,7 @@ export default function WhyChooseUs() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-14"
+          className="text-center mb-8"
         >
           <span className="text-blue-accent text-sm font-semibold tracking-widest uppercase">
             Our Advantages

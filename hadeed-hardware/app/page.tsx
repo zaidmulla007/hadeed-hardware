@@ -8,6 +8,7 @@ import BlogPreview from "./components/BlogPreview";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import FloatingActions from "./components/FloatingActions";
+import ChatBot from "./components/ChatBot";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <Contact />
       <Footer />
       <FloatingActions />
+      <ChatBot />
     </>
   );
 }

@@ -41,14 +41,14 @@ const categoryColors: Record<string, string> = {
 
 export default function BlogPreview() {
   return (
-    <section className="pt-16 md:pt-24 pb-8 md:pb-12 bg-grey-light">
+    <section className="pt-10 md:pt-14 pb-6 md:pb-10 bg-grey-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-14"
+          className="text-center mb-8"
         >
           <span className="text-blue-accent text-sm font-semibold tracking-widest uppercase">
             Latest Insights

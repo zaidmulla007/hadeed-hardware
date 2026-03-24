@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -50,6 +50,8 @@ const slides = [
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
+  const sectionRef = useRef<HTMLElement>(null);
+  const touchStartX = useRef<number | null>(null);
 
   const next = useCallback(
     () => setCurrent((p) => (p + 1) % slides.length),
@@ -65,8 +67,49 @@ export default function Hero() {
     return () => clearInterval(timer);
   }, [next]);
 
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+
+    const touchStartY = { current: 0 };
+
+    const onTouchStart = (e: TouchEvent) => {
+      touchStartX.current = e.touches[0].clientX;
+      touchStartY.current = e.touches[0].clientY;
+    };
+    const onTouchMove = (e: TouchEvent) => {
+      if (touchStartX.current === null) return;
+      const dx = Math.abs(e.touches[0].clientX - touchStartX.current);
+      const dy = Math.abs(e.touches[0].clientY - touchStartY.current);
+      if (dx > dy) {
+        e.preventDefault(); // block vertical scroll during horizontal swipe
+      }
+    };
+    const onTouchEnd = (e: TouchEvent) => {
+      if (touchStartX.current === null) return;
+      const diff = touchStartX.current - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) {
+        diff > 0 ? next() : prev();
+      }
+      touchStartX.current = null;
+    };
+
+    el.addEventListener("touchstart", onTouchStart, { passive: true });
+    el.addEventListener("touchmove", onTouchMove, { passive: false });
+    el.addEventListener("touchend", onTouchEnd, { passive: true });
+    return () => {
+      el.removeEventListener("touchstart", onTouchStart);
+      el.removeEventListener("touchmove", onTouchMove);
+      el.removeEventListener("touchend", onTouchEnd);
+    };
+  }, [next, prev]);
+
   return (
-    <section id="home" className="relative h-[85vh] md:h-screen overflow-hidden">
+    <section
+      ref={sectionRef}
+      id="home"
+      className="relative w-full h-[85vh] md:h-screen overflow-hidden"
+    >
       <AnimatePresence mode="wait">
         <motion.div
           key={current}
