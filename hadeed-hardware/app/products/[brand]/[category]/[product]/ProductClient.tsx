@@ -8,6 +8,7 @@ import {
   Phone,
   Mail,
   ArrowRight,
+  ChevronLeft,
   Send,
 } from "lucide-react";
 import Navbar from "@/app/components/Navbar";
@@ -129,6 +130,22 @@ export default function ProductClient({
                           {brand.name}
                         </span>
                       </div>
+                      {images.length > 1 && (
+                        <>
+                          <button
+                            onClick={() => setActiveImage((prev) => (prev - 1 + images.length) % images.length)}
+                            className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/80 hover:bg-white rounded-full flex items-center justify-center shadow-md transition-all"
+                          >
+                            <ChevronLeft size={18} className="text-blue-dark" />
+                          </button>
+                          <button
+                            onClick={() => setActiveImage((prev) => (prev + 1) % images.length)}
+                            className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/80 hover:bg-white rounded-full flex items-center justify-center shadow-md transition-all"
+                          >
+                            <ChevronRight size={18} className="text-blue-dark" />
+                          </button>
+                        </>
+                      )}
                     </motion.div>
 
                     {/* Thumbnails */}

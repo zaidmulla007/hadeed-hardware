@@ -106,7 +106,7 @@ export default function Loader() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
-              className="h-14 md:h-16 w-auto object-contain mb-4"
+              className="h-24 md:h-32 w-auto object-contain mb-6 rounded-xl"
               style={{ filter: "brightness(1.1)" }}
             />
 
@@ -118,7 +118,7 @@ export default function Loader() {
               className="mb-3 flex items-center justify-center gap-3"
             >
               {/* Diamond icon */}
-              <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
                 <polygon
                   points="18,2 34,18 18,34 2,18"
                   fill="none"
@@ -136,7 +136,7 @@ export default function Loader() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.5 }}
-                className="text-3xl md:text-4xl font-extrabold tracking-widest"
+                className="text-4xl md:text-5xl font-extrabold tracking-widest"
                 style={{ color: "#4A90D9" }}
               >
                 HADEED
@@ -147,7 +147,7 @@ export default function Loader() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="text-xs md:text-sm tracking-[0.25em] uppercase mb-8"
+              className="text-sm md:text-base tracking-[0.3em] uppercase mb-8"
               style={{ color: "rgba(255,255,255,0.45)" }}
             >
               Hardware &amp; Tools Trading LLC

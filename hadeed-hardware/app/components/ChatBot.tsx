@@ -5,26 +5,23 @@ import { MessageCircle, X, ChevronRight, ArrowLeft, Send } from "lucide-react";
 import { brands } from "@/app/data/products";
 
 const faqs = [
-  { q: "What are your working hours?", a: "We are open Saturday to Thursday, 8:00 AM – 6:00 PM. Closed on Fridays." },
-  { q: "Where are you located?", a: "We are located in Deira, Dubai, UAE. Visit us at our showroom for a full product experience." },
+  { q: "What are your working hours?", a: "We are open Monday to Saturday, 08:00 AM – 06:00 PM. Sunday is a holiday." },
+  { q: "Where are you located?", a: "P.O.Box: 172290, Safeel Plaza Shop No 2, Nakheel Road, Deira, Dubai - U.A.E." },
   { q: "Do you deliver across UAE?", a: "Yes! We deliver to all emirates in the UAE. Delivery timelines vary by location." },
-  { q: "How can I get a quote?", a: "You can request a quote via WhatsApp, call us, or use the 'Browse & Order' feature in this chat." },
-  { q: "What brands do you carry?", a: "We carry 20+ premium brands including Makita, DeWalt, Stanley, ESAB, Fluke, 3M, Norton, and more." },
+  { q: "How can I get a quote?", a: "You can request a quote via WhatsApp, call us, or email us to get a quote." },
+  { q: "What brands do you carry?", a: "We carry 20+ premium brands exclusive TOTAL Tools, Makita, DeWalt, Stanley, 3M, Ambersil, Hadeed Safety Wear, Norton, DeltaPlus, BW Technologies, JSP, Weicon, UNI-T, Victor, Fluke, Honeywell, Kiswel Electrode, Rothenberger, CRC, and ESAB." },
   { q: "Do you offer bulk discounts?", a: "Yes, we offer competitive pricing for bulk and wholesale orders. Contact us for a custom quote." },
-  { q: "What payment methods do you accept?", a: "We accept cash, bank transfer, and cheque payments. Contact us for more details." },
+  { q: "What payment methods do you accept?", a: "We accept cash, card, bank transfer, and cheque payments. Contact us for more details." },
   { q: "How long does delivery take?", a: "Standard delivery within Dubai takes 1–2 business days. Other emirates may take 2–4 business days." },
   { q: "Do products come with warranty?", a: "Yes, all products come with the manufacturer's warranty. Duration varies by brand and product type." },
-  { q: "Can I visit your showroom?", a: "Absolutely! Visit us at our Deira, Dubai showroom Sat–Thu, 8 AM–6 PM. We'd love to assist you in person." },
+  { q: "Can I visit your showroom?", a: "Absolutely! Visit us at our Deira, Dubai showroom Mon–Sat, 8 AM–6 PM. Sunday is a holiday." },
   { q: "Do you export outside UAE?", a: "Yes, we do international shipping. Please contact us directly for export inquiries and pricing." },
-  { q: "What is your return policy?", a: "We accept returns within 7 days for unused products in original packaging. Contact us to initiate a return." },
   { q: "Do you offer installation services?", a: "We provide guidance and can recommend certified technicians for installation of equipment." },
-  { q: "How can I track my order?", a: "Once your order is dispatched, our team will send you tracking details via WhatsApp or phone." },
   { q: "Do you have safety equipment for construction?", a: "Yes! We stock a full range of PPE including helmets, gloves, harnesses, safety shoes, and more." },
   { q: "Can I get a product catalog?", a: "Yes, we can share our product catalog via WhatsApp. Send us a message and we'll get it to you." },
   { q: "Do you supply to contractors?", a: "Absolutely. We are a trusted supplier for contractors, companies, and industrial clients across the UAE." },
-  { q: "What welding brands do you carry?", a: "We carry ESAB, Victor, Haswel, and other premium welding brands for machines, consumables, and cutting tools." },
-  { q: "Do you offer credit facilities?", a: "Credit facilities are available for registered business accounts. Please visit us or call to apply." },
-  { q: "How do I contact customer support?", a: "Call us at +971 4 2590552, WhatsApp +971 55 554 8152, or email info@hadeeddubai.ae." },
+  { q: "What welding brands do you carry?", a: "We carry ESAB, Victor, Kiswel, and other premium welding brands for machines, consumables, and cutting tools." },
+  { q: "How do I contact customer support?", a: "Call us at +971 55 548 152, +971 52 139 6242, +971 4 259 0552 or email sales@hadeeddubai.ae, info@hadeeddubai.ae." },
 ];
 
 type Message = { from: "bot" | "user"; text: string };

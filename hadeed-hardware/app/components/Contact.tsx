@@ -30,12 +30,12 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Location",
-    lines: ["P.O.Box: 172290, Nakheel Road", "Deira, Dubai - U.A.E."],
+    lines: ["P.O.Box: 172290, Safeel Plaza Shop No 2, Nakheel Road, Deira", "Dubai - U.A.E."],
   },
   {
     icon: Clock,
     title: "Working Hours",
-    lines: ["Sat\u2013Thu: 8:00 AM \u2013 7:00 PM", "Friday: Closed"],
+    lines: ["Mon\u2013Sat: 08:00 AM \u2013 06:00 PM", "Sunday: Holiday"],
   },
   {
     icon: Globe,

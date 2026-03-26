@@ -35,10 +35,10 @@ export default function About() {
           <div>
             <div className="relative rounded-2xl overflow-hidden h-[250px] sm:h-[320px] md:h-[400px]">
               <div
-                className="absolute inset-0 bg-cover bg-center"
+                className="absolute inset-0 bg-contain bg-center bg-no-repeat"
                 style={{
                   backgroundImage:
-                    "url('https://images.unsplash.com/photo-1504917595217-d4dc5ebb6355?w=800&q=80')",
+                    "url('/about.jpeg')",
                 }}
               />
               <div className="absolute inset-0 bg-blue-dark/20" />
@@ -52,7 +52,7 @@ export default function About() {
             <h3 className="text-2xl font-bold text-blue-dark mb-4">
               Trusted Supplier of Hardware & Building Materials
             </h3>
-            <p className="text-grey leading-relaxed mb-4">
+            <p className="text-grey leading-relaxed mb-4 text-justify">
               Established in 2012 in the Emirate of Dubai, Hadeed Hardware &
               Tools Trading LLC was founded by seasoned professionals with over
               32 years of market experience. We specialize in supplying
@@ -60,7 +60,7 @@ export default function About() {
               tools, safety items, and welding equipment for the construction,
               oilfield services, and manufacturing industries.
             </p>
-            <p className="text-grey leading-relaxed mb-6">
+            <p className="text-grey leading-relaxed mb-6 text-justify">
               Driven by a passion for excellence and a commitment to customer
               satisfaction, we have forged strong partnerships with clients
               across the region, ensuring efficient delivery and competitive

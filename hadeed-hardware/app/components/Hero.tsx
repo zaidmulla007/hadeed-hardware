@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const slides = [
   {
     image: "/banners/PNG%20(1).jpg",
-    title: "Your Trusted Partner",
+    title: "Total Hardware Solution",
     subtitle: "For Hardware & Industrial Solutions",
     description:
       "Supplying hardware, building materials, machine tools, safety items, and welding equipment with competitive pricing since 2012.",
@@ -30,7 +30,7 @@ const slides = [
     title: "Welding & Cutting",
     subtitle: "Industrial-Grade Equipment",
     description:
-      "ESAB, Victor, Haswel — complete welding machines, consumables, and gas cutting solutions.",
+      "ESAB, Victor, Kiswel — complete welding machines, consumables, and gas cutting solutions.",
   },
   {
     image: "/banners/PNG%20(5).jpg",
@@ -144,8 +144,9 @@ export default function Hero() {
                 transition={{ delay: 0.2 }}
                 className="mb-6"
               >
-                <span className="inline-block px-4 py-2 bg-blue-accent/20 backdrop-blur-sm border border-blue-accent/40 rounded-full text-blue-accent font-semibold text-sm tracking-wider">
-                  Hadeed Hardware & Tools Trading LLC
+                <span className="inline-block px-4 py-2 bg-blue-accent/20 backdrop-blur-sm border border-blue-accent/40 rounded-full text-white tracking-wider">
+                  <span className="font-extrabold text-sm">HADEED HARDWARE & TOOLS </span>
+                  <span className="font-semibold text-[10px]">TRDG LLC</span>
                 </span>
               </motion.div>
 

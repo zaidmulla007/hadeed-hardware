@@ -9,6 +9,9 @@ const quickLinks = [
   { name: "Products", href: "/products" },
   { name: "Brands", href: "/brands" },
   { name: "Why Choose Us", href: "/why-us" },
+  { name: "Blog", href: "/blog" },
+  { name: "Certificates", href: "/certificates" },
+  { name: "Gallery", href: "/gallery" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -19,17 +22,6 @@ const productLinks = [
   { name: "Welding & Cutting", href: "/category/welding-cutting" },
   { name: "Electrical & Measuring", href: "/category/electrical-measuring" },
   { name: "Industrial Chemicals", href: "/category/industrial-chemicals" },
-];
-
-const brandHighlights = [
-  "TOTAL Tools",
-  "DeWalt",
-  "Stanley",
-  "3M",
-  "ESAB",
-  "Fluke",
-  "Honeywell",
-  "Norton",
 ];
 
 export default function Footer() {
@@ -43,24 +35,22 @@ export default function Footer() {
       <div className="absolute bottom-10 left-10 w-72 h-72 bg-blue/10 rounded-full blur-3xl" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr] gap-10">
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-2 mb-4">
               <img
                 src="/hadeed-logo.jpg"
                 alt="Hadeed Hardware Logo"
-                className="h-10 w-auto object-contain rounded-lg"
+                className="h-16 md:h-20 w-auto object-contain rounded-xl"
               />
               <div>
-                <span className="text-white/50 text-[8px] md:text-[9px] leading-tight block">
-                  حديد للأدوات والمعدات التجارية ذ.م.م
+                <span className="text-white text-md md:text-2xl font-bold leading-tight block" dir="rtl">
+                  حديد لتجارة عددو أدوات البناء ش.ذ.م.م
                 </span>
-                <span className="font-extrabold text-3xl block leading-tight">
-                  HADEED
-                </span>
-                <span className="text-white/50 text-[7px] md:text-[8px] leading-tight block">
-                  HARDWARE & TOOLS TRDG LLC
+                <span className="text-white leading-tight block tracking-wide">
+                  <span className="font-extrabold text-sm md:text-base">HADEED HARDWARE & TOOLS </span>
+                  <span className="font-semibold text-[10px] md:text-xs">TRDG LLC</span>
                 </span>
               </div>
             </div>
@@ -77,17 +67,17 @@ export default function Footer() {
                 <Phone size={14} /> +971 4 2590552
               </a>
               <a
-                href="mailto:info@hadeeddubai.ae"
+                href="mailto:sales@hadeeddubai.ae"
                 className="flex items-center gap-2 text-white/70 hover:text-blue-accent transition-colors"
               >
-                <Mail size={14} /> info@hadeeddubai.ae
+                <Mail size={14} /> sales@hadeeddubai.ae
               </a>
               <div className="flex items-start gap-2 text-white/70">
                 <MapPin size={14} className="mt-1 shrink-0" />
                 <span>
-                  P.O.Box: 172290, Nakheel Road
+                  P.O.Box: 172290, Safeel Plaza Shop No 2, Nakheel Road, Deira
                   <br />
-                  Deira, Dubai - U.A.E.
+                  Dubai - U.A.E.
                 </span>
               </div>
             </div>
@@ -144,26 +134,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Brands */}
-          <div>
-            <h4 className="font-bold text-lg mb-4">Top Brands</h4>
-            <div className="flex flex-wrap gap-2">
-              {brandHighlights.map((b) => (
-                <span
-                  key={b}
-                  className="text-xs px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-white/70 hover:border-blue-accent/50 hover:text-blue-accent transition-all cursor-default"
-                >
-                  {b}
-                </span>
-              ))}
-            </div>
-            <div className="mt-6">
-              <h5 className="font-semibold text-sm mb-2 text-white/80">
-                Managing Director &amp; CEO
-              </h5>
-              <p className="text-white/50 text-sm">Aliasgher Abid</p>
-            </div>
-          </div>
         </div>
 
         {/* Divider */}

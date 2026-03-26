@@ -13,6 +13,8 @@ const navLinks = [
   { name: "Products", href: "/products", hasDropdown: true, match: "/products" },
   { name: "Brands", href: "/brands", match: "/brands" },
   { name: "Why Us", href: "/why-us", match: "/why-us" },
+  { name: "Certificates", href: "/certificates", match: "/certificates" },
+  { name: "Gallery", href: "/gallery", match: "/gallery" },
   { name: "Blog", href: "/blog", match: "/blog" },
   { name: "Contact", href: "/contact", match: "/contact" },
 ];
@@ -35,36 +37,33 @@ export default function Navbar() {
       {/* Top Bar */}
       <div className="hidden md:block bg-blue-dark text-white text-sm">
         <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
-          <div className="flex items-center gap-6">
-            <a
-              href="tel:+97142590552"
-              className="flex items-center gap-2 hover:text-blue-accent transition-colors"
-            >
-              <Phone size={14} />
-              +971 4 2590552
-            </a>
-            <a
-              href="mailto:info@hadeeddubai.ae"
-              className="flex items-center gap-2 hover:text-blue-accent transition-colors"
-            >
-              <Mail size={14} />
-              info@hadeeddubai.ae
-            </a>
+          <div className="flex items-center gap-4">
+            <Phone size={14} className="shrink-0" />
+            <a href="tel:+97155548152" className="hover:text-blue-accent transition-colors">+971 55 548 152</a>
+            <span className="text-white/30">|</span>
+            <a href="tel:+971521396242" className="hover:text-blue-accent transition-colors">+971 52 139 6242</a>
+            <span className="text-white/30">|</span>
+            <a href="tel:+97142590552" className="hover:text-blue-accent transition-colors">+971 4 259 0552</a>
+            <span className="text-white/30 ml-2">|</span>
+            <Mail size={14} className="shrink-0 ml-2" />
+            <a href="mailto:sales@hadeeddubai.ae" className="hover:text-blue-accent transition-colors">sales@hadeeddubai.ae</a>
+            <span className="text-white/30">|</span>
+            <a href="mailto:info@hadeeddubai.ae" className="hover:text-blue-accent transition-colors">info@hadeeddubai.ae</a>
           </div>
           <div className="flex items-center gap-3">
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-blue-accent transition-colors">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-accent transition-colors">
               <FaFacebookF size={16} />
             </a>
-            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-blue-accent transition-colors">
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-accent transition-colors">
               <FaYoutube size={16} />
             </a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-blue-accent transition-colors">
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-accent transition-colors">
               <FaLinkedinIn size={16} />
             </a>
-            <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-blue-accent transition-colors">
+            <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-accent transition-colors">
               <FaXTwitter size={16} />
             </a>
-            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-blue-accent transition-colors">
+            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-accent transition-colors">
               <FaTiktok size={14} />
             </a>
           </div>
@@ -89,17 +88,15 @@ export default function Navbar() {
               <img
                 src="/hadeed-logo.jpg"
                 alt="Hadeed Hardware Logo"
-                className="h-10 md:h-12 w-auto object-contain"
+                className="h-16 md:h-20 w-auto object-contain"
               />
               <div>
-                <span className="text-grey text-[8px] md:text-[9px] leading-tight block">
-                  حديد للأدوات والمعدات التجارية ذ.م.م
+                <span className="text-blue text-md md:text-2xl font-bold leading-tight block" dir="rtl">
+                  حديد لتجارة عددو أدوات البناء ش.ذ.م.م
                 </span>
-                <span className="text-blue font-extrabold text-2xl md:text-3xl leading-tight block">
-                  HADEED
-                </span>
-                <span className="text-grey text-[7px] md:text-[8px] leading-tight block">
-                  HARDWARE & TOOLS TRDG LLC
+                <span className="text-blue leading-tight block tracking-wide">
+                  <span className="font-extrabold text-sm md:text-base">HADEED HARDWARE & TOOLS </span>
+                  <span className="font-semibold text-[10px] md:text-xs">TRDG LLC</span>
                 </span>
               </div>
             </Link>
@@ -184,12 +181,6 @@ export default function Navbar() {
                 </Link>
               );
             })}
-            <Link
-              href="/contact"
-              className="ml-4 px-5 py-2.5 bg-blue text-white text-sm font-semibold rounded-lg hover:bg-blue-dark transition-colors"
-            >
-              Get Quote
-            </Link>
           </div>
 
           {/* Mobile Toggle */}
@@ -290,17 +281,29 @@ export default function Navbar() {
                     </motion.div>
                   );
                 })}
-                <Link
-                  href="/contact"
-                  onClick={() => setMobileOpen(false)}
-                  className="block mx-4 mt-2 px-5 py-3 bg-blue text-white text-center font-semibold rounded-lg"
-                >
-                  Get Quote
-                </Link>
-                <div className="flex items-center gap-4 px-4 pt-3 text-sm text-grey">
-                  <a href="tel:+97142590552" className="flex items-center gap-1">
-                    <Phone size={14} /> +971 4 2590552
-                  </a>
+                <div className="px-4 pt-4 pb-2 space-y-2 text-sm text-grey border-t border-gray-100 mt-2">
+                  <div className="flex items-center gap-2">
+                    <Phone size={14} className="shrink-0 text-blue" />
+                    <div className="flex flex-wrap gap-x-3 gap-y-1">
+                      <a href="tel:+97155548152" className="hover:text-blue transition-colors">+971 55 548 152</a>
+                      <a href="tel:+971521396242" className="hover:text-blue transition-colors">+971 52 139 6242</a>
+                      <a href="tel:+97142590552" className="hover:text-blue transition-colors">+971 4 259 0552</a>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Mail size={14} className="shrink-0 text-blue" />
+                    <div className="flex flex-wrap gap-x-3 gap-y-1">
+                      <a href="mailto:sales@hadeeddubai.ae" className="hover:text-blue transition-colors">sales@hadeeddubai.ae</a>
+                      <a href="mailto:info@hadeeddubai.ae" className="hover:text-blue transition-colors">info@hadeeddubai.ae</a>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4 pt-2">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="text-grey hover:text-blue transition-colors"><FaFacebookF size={16} /></a>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="text-grey hover:text-blue transition-colors"><FaYoutube size={16} /></a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="text-grey hover:text-blue transition-colors"><FaLinkedinIn size={16} /></a>
+                    <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer" className="text-grey hover:text-blue transition-colors"><FaXTwitter size={16} /></a>
+                    <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" className="text-grey hover:text-blue transition-colors"><FaTiktok size={14} /></a>
+                  </div>
                 </div>
               </div>
             </motion.div>

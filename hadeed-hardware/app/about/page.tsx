@@ -95,10 +95,10 @@ export default function AboutPage() {
             >
               <div className="relative rounded-2xl overflow-hidden h-[280px] sm:h-[350px] md:h-[450px]">
                 <div
-                  className="absolute inset-0 bg-cover bg-center"
+                  className="absolute inset-0 bg-contain bg-center bg-no-repeat"
                   style={{
                     backgroundImage:
-                      "url('https://images.unsplash.com/photo-1504917595217-d4dc5ebb6355?w=800&q=80')",
+                      "url('/about.jpeg')",
                   }}
                 />
                 <div className="absolute inset-0 bg-blue-dark/20" />
@@ -125,7 +125,7 @@ export default function AboutPage() {
               <h2 className="mt-3 text-2xl md:text-3xl font-bold text-blue-dark mb-6">
                 A Brief Story About The Company
               </h2>
-              <p className="text-grey leading-relaxed mb-4">
+              <p className="text-grey leading-relaxed mb-4 text-justify">
                 In 2012, amidst the bustling metropolis of the Emirate of Dubai,
                 a group of seasoned professionals with over 32 years of market
                 experience embarked on a journey to establish a company unlike
@@ -135,7 +135,7 @@ export default function AboutPage() {
                 consumables for the construction, oilfield services, and
                 manufacturing industries.
               </p>
-              <p className="text-grey leading-relaxed mb-4">
+              <p className="text-grey leading-relaxed mb-4 text-justify">
                 Driven by a passion for excellence and a commitment to customer
                 satisfaction, the company quickly gained traction, forging strong
                 partnerships with clients across the region. With each passing
@@ -143,14 +143,14 @@ export default function AboutPage() {
                 competitive pricing grew, propelling them towards greater heights
                 of success.
               </p>
-              <p className="text-grey leading-relaxed mb-4">
+              <p className="text-grey leading-relaxed mb-4 text-justify">
                 Today, that once-small venture stands as a towering testament to
                 the power of dedication, perseverance, and a steadfast commitment
                 to quality. With a vast and esteemed client base, the company
                 continues to thrive, its story a shining example of what can be
                 achieved when passion meets purpose.
               </p>
-              <p className="text-grey leading-relaxed">
+              <p className="text-grey leading-relaxed text-justify">
                 Under the leadership of{" "}
                 <strong className="text-blue-dark">Aliasgher Abid</strong>,
                 Managing Director &amp; CEO, the company continues to expand its
@@ -185,7 +185,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-grey leading-relaxed text-center mb-10"
+              className="text-grey leading-relaxed text-justify mb-10"
             >
               Step into a world of boundless possibilities with our extensive
               array of products, meticulously curated to cater to every facet
@@ -227,7 +227,7 @@ export default function AboutPage() {
               <div className="bg-gradient-to-br from-blue-dark to-blue rounded-3xl p-8 md:p-10 text-white h-full">
                 <Target size={40} className="mb-5 text-blue-accent" />
                 <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
-                <p className="text-white/80 leading-relaxed">
+                <p className="text-white/80 leading-relaxed text-justify">
                   To build the future, one material at a time, by delivering
                   excellence in hardware, building materials, and more for
                   construction, oilfield services, and manufacturing. We&apos;re
@@ -247,7 +247,7 @@ export default function AboutPage() {
               <div className="bg-gradient-to-br from-blue to-blue-accent rounded-3xl p-8 md:p-10 text-white h-full">
                 <Eye size={40} className="mb-5 text-white" />
                 <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
-                <p className="text-white/85 leading-relaxed">
+                <p className="text-white/85 leading-relaxed text-justify">
                   To be the top supplier of quality materials for construction,
                   oilfield services, and manufacturing, surpassing expectations
                   through innovation and customer-centric solutions while
@@ -294,7 +294,7 @@ export default function AboutPage() {
                     <Icon size={24} className="text-blue" />
                   </div>
                   <h4 className="font-bold text-blue-dark mb-2">{cap.title}</h4>
-                  <p className="text-grey text-sm leading-relaxed">
+                  <p className="text-grey text-sm leading-relaxed text-justify">
                     {cap.desc}
                   </p>
                 </motion.div>
@@ -328,7 +328,7 @@ export default function AboutPage() {
               <p className="text-blue-accent text-sm font-medium mb-3">
                 Managing Director &amp; CEO
               </p>
-              <p className="text-grey text-sm leading-relaxed">
+              <p className="text-grey text-sm leading-relaxed text-justify">
                 Under the leadership of Aliasgher Abid, Hadeed Hardware &
                 Tools Trading LLC continues to expand its product range and
                 strengthen relationships with suppliers and customers

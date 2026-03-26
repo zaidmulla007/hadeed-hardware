@@ -244,7 +244,7 @@ export default function BlogDetailPage() {
             {blog.content.map((paragraph, i) => (
               <p
                 key={i}
-                className={`text-grey-dark leading-relaxed ${
+                className={`text-grey-dark leading-relaxed text-justify ${
                   i === 0 ? "text-lg font-medium" : "text-base"
                 }`}
               >

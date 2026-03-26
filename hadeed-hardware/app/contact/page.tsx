@@ -30,17 +30,17 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    lines: ["info@hadeeddubai.ae", "sales@hadeeddubai.ae"],
+    lines: ["sales@hadeeddubai.ae", "info@hadeeddubai.ae"],
   },
   {
     icon: MapPin,
     title: "Location",
-    lines: ["P.O.Box: 172290, Nakheel Road", "Deira, Dubai - U.A.E."],
+    lines: ["P.O.Box: 172290, Safeel Plaza Shop No 2, Nakheel Road, Deira", "Dubai - U.A.E."],
   },
   {
     icon: Clock,
     title: "Working Hours",
-    lines: ["Sat\u2013Thu: 8:00 AM \u2013 7:00 PM", "Friday: Closed"],
+    lines: ["Mon\u2013Sat: 08:00 AM \u2013 06:00 PM", "Sunday: Holiday"],
   },
   {
     icon: Globe,
@@ -285,14 +285,14 @@ export default function ContactPage() {
                     </div>
                   </a>
                   <a
-                    href="mailto:info@hadeeddubai.ae"
+                    href="mailto:sales@hadeeddubai.ae"
                     className="flex items-center gap-3 px-4 py-3 bg-blue/5 rounded-xl hover:bg-blue/10 transition-colors"
                   >
                     <Mail size={18} className="text-blue" />
                     <div>
                       <div className="text-xs text-grey">Email</div>
                       <div className="text-sm font-semibold text-blue-dark">
-                        info@hadeeddubai.ae
+                        sales@hadeeddubai.ae
                       </div>
                     </div>
                   </a>
@@ -301,7 +301,7 @@ export default function ContactPage() {
                     <div>
                       <div className="text-xs text-grey">Working Hours</div>
                       <div className="text-sm font-semibold text-blue-dark">
-                        Sat-Thu: 8AM-7PM
+                        Mon-Sat: 8AM-6PM | Sun: Holiday
                       </div>
                     </div>
                   </div>
@@ -315,7 +315,7 @@ export default function ContactPage() {
                     Our Location
                   </h3>
                   <p className="text-grey text-sm">
-                    P.O.Box: 172290, Nakheel Road, Deira, Dubai - U.A.E.
+                    P.O.Box: 172290, Safeel Plaza Shop No 2, Nakheel Road, Deira<br />Dubai - U.A.E.
                   </p>
                 </div>
                 <iframe
