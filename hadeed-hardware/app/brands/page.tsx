@@ -63,12 +63,7 @@ const brands: BrandData[] = [
     abbr: "HS",
     sector: "safety",
     categories: [
-      { cat: "Head Protection", subs: ["Safety Helmets", "Bump Caps", "Hard Hat Accessories"] },
-      { cat: "Eye & Face Protection", subs: ["Safety Glasses", "Goggles", "Face Shields", "Welding Visors"] },
-      { cat: "Hand Protection", subs: ["Leather Gloves", "Cut-Resistant Gloves", "Chemical Gloves", "Disposable Gloves"] },
-      { cat: "Foot Protection", subs: ["Safety Shoes", "Safety Boots", "Anti-Static Footwear"] },
-      { cat: "Body Protection", subs: ["Hi-Vis Vests", "Coveralls", "Safety Harnesses", "Knee Pads"] },
-      { cat: "Respiratory Protection", subs: ["Dust Masks", "Half-Face Respirators", "Full-Face Respirators"] },
+      { cat: "Welding Safety Wear", subs: ["Welding Leather Hand Gloves", "Working Leather Hand Gloves", "Welding Leather Aprons", "Welding Leather Hand Sleeves", "Welding Leg Guards", "Welding Leather Bib Jackets"] },
     ],
   },
   {

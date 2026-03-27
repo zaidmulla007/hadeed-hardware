@@ -35,11 +35,7 @@ export default function About() {
           <div>
             <div className="relative rounded-2xl overflow-hidden h-[250px] sm:h-[320px] md:h-[400px]">
               <div
-                className="absolute inset-0 bg-contain bg-center bg-no-repeat"
-                style={{
-                  backgroundImage:
-                    "url('/about.jpeg')",
-                }}
+                className="absolute inset-0 bg-grey-light"
               />
               <div className="absolute inset-0 bg-blue-dark/20" />
               <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm rounded-xl px-6 py-4">

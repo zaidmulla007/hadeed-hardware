@@ -95,11 +95,7 @@ export default function AboutPage() {
             >
               <div className="relative rounded-2xl overflow-hidden h-[280px] sm:h-[350px] md:h-[450px]">
                 <div
-                  className="absolute inset-0 bg-contain bg-center bg-no-repeat"
-                  style={{
-                    backgroundImage:
-                      "url('/about.jpeg')",
-                  }}
+                  className="absolute inset-0 bg-grey-light"
                 />
                 <div className="absolute inset-0 bg-blue-dark/20" />
                 <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 bg-white/90 backdrop-blur-sm rounded-xl px-4 py-3 sm:px-6 sm:py-4">

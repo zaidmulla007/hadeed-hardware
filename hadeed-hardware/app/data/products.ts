@@ -175,38 +175,13 @@ export const brands: Brand[] = [
     sectorLabel: sectorLabels.safety,
     description: sectorDescriptions.safety,
     categories: [
-      buildCategory("Head Protection", [
-        "Safety Helmets",
-        "Bump Caps",
-        "Hard Hat Accessories",
-      ]),
-      buildCategory("Eye & Face Protection", [
-        "Safety Glasses",
-        "Goggles",
-        "Face Shields",
-        "Welding Visors",
-      ]),
-      buildCategory("Hand Protection", [
-        "Leather Gloves",
-        "Cut-Resistant Gloves",
-        "Chemical Gloves",
-        "Disposable Gloves",
-      ]),
-      buildCategory("Foot Protection", [
-        "Safety Shoes",
-        "Safety Boots",
-        "Anti-Static Footwear",
-      ]),
-      buildCategory("Body Protection", [
-        "Hi-Vis Vests",
-        "Coveralls",
-        "Safety Harnesses",
-        "Knee Pads",
-      ]),
-      buildCategory("Respiratory Protection", [
-        "Dust Masks",
-        "Half-Face Respirators",
-        "Full-Face Respirators",
+      buildCategory("Welding Safety Wear", [
+        "Welding Leather Hand Gloves",
+        "Working Leather Hand Gloves",
+        "Welding Leather Aprons",
+        "Welding Leather Hand Sleeves",
+        "Welding Leg Guards",
+        "Welding Leather Bib Jackets",
       ]),
     ],
   },
