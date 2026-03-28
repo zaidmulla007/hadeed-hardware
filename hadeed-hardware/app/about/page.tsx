@@ -100,14 +100,10 @@ export default function AboutPage() {
                   className="w-full h-full object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-blue-dark/20" />
-                <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 bg-white/90 backdrop-blur-sm rounded-xl px-4 py-3 sm:px-6 sm:py-4">
-                  <div className="text-2xl sm:text-3xl font-bold text-blue">32+</div>
-                  <div className="text-xs sm:text-sm text-grey">Years of Market Experience</div>
-                </div>
-                <div className="absolute top-4 right-4 sm:top-6 sm:right-6 bg-white/90 backdrop-blur-sm rounded-xl px-4 py-3 sm:px-6 sm:py-4">
-                  <div className="text-2xl sm:text-3xl font-bold text-blue">20+</div>
-                  <div className="text-xs sm:text-sm text-grey">Global Brands</div>
-                </div>
+              </div>
+              <div className="text-center mt-4">
+                <h4 className="text-lg font-bold text-blue-dark">Aliasgher Abid</h4>
+                <p className="text-sm text-grey">Managing Director & CEO</p>
               </div>
             </motion.div>
 

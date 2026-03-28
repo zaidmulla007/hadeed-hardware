@@ -40,10 +40,10 @@ export default function About() {
                 className="w-full h-full object-cover object-top"
               />
               <div className="absolute inset-0 bg-blue-dark/20" />
-              <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm rounded-xl px-6 py-4">
-                <div className="text-3xl font-bold text-blue">32+</div>
-                <div className="text-sm text-grey">Years of Market Experience</div>
-              </div>
+            </div>
+            <div className="text-center mt-4">
+              <h4 className="text-lg font-bold text-blue-dark">Aliasgher Abid</h4>
+              <p className="text-sm text-grey">Managing Director & CEO</p>
             </div>
           </div>
           <div>
