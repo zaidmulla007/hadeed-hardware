@@ -33,9 +33,11 @@ export default function About() {
           className="grid md:grid-cols-2 gap-10 items-center"
         >
           <div>
-            <div className="relative rounded-2xl overflow-hidden h-[250px] sm:h-[320px] md:h-[400px]">
-              <div
-                className="absolute inset-0 bg-grey-light"
+            <div className="relative rounded-2xl overflow-hidden h-[350px] sm:h-[450px] md:h-[550px] max-w-[400px] mx-auto">
+              <img
+                src="/about.jpeg"
+                alt="About Hadeed Hardware"
+                className="w-full h-full object-cover object-top"
               />
               <div className="absolute inset-0 bg-blue-dark/20" />
               <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm rounded-xl px-6 py-4">
